@@ -3,6 +3,7 @@ import 'auth_service.dart';
 import 'registro_page.dart';
 import 'inicio_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -22,6 +23,21 @@ class _LoginPageState extends State<LoginPage> {
 
   bool ocultarPassword = true;
 
+  String version = '';
+
+  @override
+  void initState() {
+    super.initState();
+    _cargarVersion();
+  }
+
+  Future<void> _cargarVersion() async {
+    final info = await PackageInfo.fromPlatform();
+    if (!mounted) return;
+    setState(() {
+      version = 'Versión ${info.version} (${info.buildNumber})';
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -235,6 +251,14 @@ class _LoginPageState extends State<LoginPage> {
 
                         child: const Text(
                           '¿No tienes una cuenta? Regístrate',
+                        ),
+                      ),
+                      const SizedBox(height: 10),
+                      Text(
+                        version,
+                        style: const TextStyle(
+                          fontSize: 12,
+                          color: Colors.grey,
                         ),
                       ),
                     ],

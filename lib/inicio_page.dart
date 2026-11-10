@@ -3,7 +3,6 @@ import 'package:proyecto10ids1/Camara_page.dart';
 import 'package:proyecto10ids1/clasificacion_page.dart';
 import 'package:proyecto10ids1/contactos.dart';
 import 'package:proyecto10ids1/login_page.dart';
-import 'package:proyecto10ids1/pokemon_page.dart';
 import 'clientes_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -90,20 +89,6 @@ class InicioPage extends StatelessWidget {
                   ),
                 );
 
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.catching_pokemon),
-              title: const Text('Pokemones'),
-              onTap: () {
-
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) =>
-                    const PokemonPage(),
-                  ),
-                );
               },
             ),
             ListTile(

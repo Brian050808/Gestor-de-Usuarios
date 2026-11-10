@@ -1,17 +1,26 @@
-# proyecto10ids1
+# Gestor de Usuarios
 
-A new Flutter project.
+Aplicación Android hecha con Flutter para administrar clientes y contactos.
+Proyecto educativo de código abierto.
 
-## Getting Started
+## Funciones
 
-This project is a starting point for a Flutter application.
+- Cuenta local (correo y contraseña) guardada solo en el dispositivo (SQLite).
+- Alta, edición y baja de clientes (nombre, teléfono y correo).
+- Clasificaciones propias que se asignan a cada cliente.
+- Consulta de los contactos del teléfono y apertura de un chat de WhatsApp.
+- Escáner de códigos QR (ZXing) que abre enlaces http/https.
 
-A few resources to get you started if this is your first Flutter project:
+La app no usa servicios de Google, Firebase, anuncios ni rastreadores, y no
+necesita conexión a internet.
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## Compilar
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```
+flutter pub get
+flutter run
+```
+
+## Licencia
+
+Consulta el archivo `LICENSE`.
