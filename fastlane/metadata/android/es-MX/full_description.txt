@@ -1,4 +1,4 @@
-PokeClientes te permite registrar y organizar a tus clientes de forma sencilla.
+Gestor de Usuarios te permite registrar y organizar a tus clientes de forma sencilla.
 
 - Crea una cuenta y entra con tu correo y contraseña.
 - Agrega, edita y elimina clientes con nombre, teléfono y correo.
